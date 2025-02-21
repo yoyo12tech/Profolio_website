@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    font-family: 'Poppins',sans-serif;
+    margin: 0; /**/
+    padding: 0;/*good practise to make margin and padding 0 for all aswel as..*/
+    box-sizing: border-box; /* makes width defined be not exceeded. Any padding or border is included in that width default is content box which deosnt do that */
+    scroll-behavior: smooth; /*for smooth scrolling*/
+}
+header{
+    background-color: rgb(255, 255, 255);
+    width: 100%;  
+    position: sticky; /*m akes header stick ot fixed even when scrolling*/
+    top:0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;  /* Adds space between children elents*/
+    align-items: center;
+    padding: 10px 100px;  /*10px for top and bottom and 100 for right and left */
+    border-bottom: 0.1px solid rgb(0, 72, 255);
+
+}
+.logo{
+    text-decoration: none; /* remove line under the link*/
+    color:rgb(58, 108, 255);
+    text-transform: uppercase; /*transforms text t  o uppercase*/
+    font-weight: 700; /*how bold it is*/
+    font-size: 1.8em; /*1 em is 16 px by default as body doesnt have value so default is 16*/
+}
+.navigation{
+    display: flex;
+    justify-content: center;  /* Adds space between children elents*/
+    align-items: center;
+    width: 20vw;
+}
+.navigation a{ /*target anchor elements inside parent class navigation*/
+    text-decoration: none; /* remove line under the link*/
+    color:rgb(58, 108, 255); 
+    font-weight: 500;
+    font-size: 1.1em; /*1 em is 16 px by default as body doesnt have value so default is 16*/
+    padding-left: 30px;
+}
+.navigation a:hover{
+    color: rgb(88, 46, 255);
+    font-weight: 513;
+    font-size:1.13em ;
+}
+section{
+    padding: 100px 100px;
+}
+.main{
+    width: 100%;
+    min-height: calc(92vh);
+    display: flex;
+    align-items: center;
+    background: url('images/background_2.jpg') no-repeat;
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed;
+
+}
+.main h2{
+    color: rgb(255, 255, 255);
+    font-size: 2.1vw;
+    font-weight: 700;
+
+}
+.main h2 span{
+    display: inline-block;
+    margin-top: 10px;
+    color: rgb(58, 108, 255);
+    font-size: 7vw;
+    font-weight: 600;
+}
+.main h3{
+    color: rgb(255, 255, 255);
+    font-size: 3vw;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+}
+.main-btn{
+    color: azure;
+    background-color: rgb(58, 108, 255);
+    text-decoration: none;
+    font-size: min(2.5vw,20px);
+    font-weight: 600;
+    display: inline-block; /*anchor and span elements are inline so for you to be able to add pargin make them inline blocks*/
+    padding: 0.93em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.7s ease; /*Makes hover effects smooth over 0.7 seconds.*/
+
+}
+.main-btn:hover{
+    background-color: rgba(0, 0, 255, 0.253);
+    transform: scale(1.1);
+}
+.social-icons i{
+    color: rgb(255, 255, 255);
+    padding-right:50px ;
+    font-size:  max(2vw,20px);
+    
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: space-evenly;
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: calc(92vh);
+}
+.title{
+    display: flex;
+    justify-content: center;
+    color:rgb(58, 108, 255);
+    position: relative;
+    top:-2vw;
+    font-size: 5vw;
+}
+.content{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    flex-wrap: wrap; /* Allows flex items to move to the next line if they don’t fit */
+}
+.card{
+    width: 25vw;
+    height: 25vw;
+    display: flex;
+    flex-direction: column;
+    border:2px solid rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 50px rgb(219, 219, 219);
+    margin-top: 10px;
+    transition: 0.7s ease-in-out;
+
+
+}
+.card:hover{
+    background-color:rgb(58, 108, 255);
+    box-shadow: 0px 0px 10px #0037ff;
+    transform: scale(1.1);
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7vw;
+    color: rgb(2, 31, 252);
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+.card:hover .icon{
+    color: rgb(255, 255, 255);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: rgb(0, 13, 255);
+    margin-bottom: 20px;
+}
+.info h3{
+    color: #0037ff;
+    margin-bottom: 10px;
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card:hover h3{
+    color: rgb(255, 255, 255);
+}
+.info p{
+    width: 90%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    font-size: 1vw;
+    font-weight: 600;
+}
+.card:hover p{
+    color: rgb(255, 255, 255);
+}
+
+
+.projects{
+    width: 100%;
+    min-height: calc(92vh);
+    background-color: #000a20;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.project-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    width: 110%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+.project-card{
+    width: 20.5vw;
+    height: 20vw;
+    background-color: #ffffff;;
+    color: #0037ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #ffffff;;
+    margin-bottom: 4vw;
+    transition: 0.7s ease-in-out;
+    
+}
+.project-card:hover{
+    background-color:  #000a20;;
+    color: #0037ff;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px #0037ff;
+    margin:1px 2.5vw 4vw 2.5vw ;
+
+}
+
+.project-card img{
+    width: 20.5vw;
+    height: 9vw;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin-bottom: 2vw;
+    z-index: 3;
+    border-bottom: 3px inset #0037ff;
+
+    
+}
+.project-info{
+    width: 20vw;
+    height: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0px;
+}
+
+.project-card h5{
+    font-size: 1vw;
+    margin-top: -3.5vw;
+    font-weight: 900;
+    display: inline-block;
+
+}
+.project-card p{
+    
+    font-size: 0.7vw;
+    margin-top: 1px;
+    font-weight: 700;
+
+}
+.contacts{
+    width: 100%;
+    min-height: calc(92vh);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #ffffff;;
+
+}
+
+
+.contacts .content{
+    justify-content: space-around; 
+    width: 69%;
+}
+.contacts .content .card .info p{
+    display: flex; justify-content: center;font-size: 1.3vw;
+}
+
+
+footer{
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000a20;;
+    color: #ffffff;
+    padding: 10px 0px;
+}
+.footer-title{
+    font-size:  max(1.6vw,15px);
+    font-weight: 700;
+    padding-left: 10px;
+}
+.footer-title span{
+    color: #0037ff;
+}
+
+footer .social-icons i{ 
+    font-size: max(1.6vw,15px);
+    padding-right:3vw;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    /* Styles for screens 768px wide or smaller */
+    
+    
+    .navigation a:hover{
+        color: rgb(88, 46, 255);
+        font-weight: 413;
+        font-size:0.8em ;
+    }
+    
+    
+    .cards{
+        position: relative;
+        padding-top: 15px;
+        padding-bottom: 0px;
+    }
+    
+    .card{
+        margin-bottom: 10px;
+        width: 50vw;
+        height: 28vw;
+    }
+    .title{
+        font-size: 30px;
+        position: relative;
+        top: 1px;
+    }
+    .icon{
+        font-size: 9vw;
+    }
+    .info h3{
+        font-size: 2.6vw;
+    }
+    .info p{
+        font-size: 1.3vw;
+    }
+    .navigation a{
+        font-size: 0.7em;
+        padding-right: 0px;
+    }
+    .project-card{
+        width: 35vw;
+        height: 30vw;
+        margin-right: 10px;
+    }
+    .project-info{
+        width: 30vw;
+        height: 17vw;
+    }
+    .project-card img{
+        width: 35vw;
+        height: 17vw;
+    }
+    .project-card h5{
+        font-size: 1.4vw;
+    }
+    .project-card p{
+        font-size: 1.1vw;
+    }
+    .project-card:hover{
+        background-color:  #000a20;;
+        color: #0037ff;
+        transform: scale(1.1);
+        box-shadow: 0px 0px 20px #0037ff;
+        margin:0px 1.7vw 5vw 0vw ;    
+    }
+    
+    
+}
+
+@media (max-width: 460px) {
+    .navigation{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;  /* Adds space between children elents*/
+        align-items: center;
+        width: 100%;
+    }
+}
+
+/**/
